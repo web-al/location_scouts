@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script|Roboto+Condensed:400,700');
+
+body {    
+  font-family: 'Roboto Condensed', 'Trebuchet MS', sans-serif;
+  color: rgba(90,63,24,1);
+  background-repeat: repeat-x;
+  background-color: royalblue;
+}
+
+#wrapper {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  font-size: 0;
+}
+
+h1 {
+  display: none;
+}
+
+header nav {
+  display: inline-block;
+  width: 713px;
+  text-align: right;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: inline;
+  font-family: 'Oleo Script', cursive;
+}
+nav li {
+  display: inline;
+  margin-left: 30px;
+}
+
+nav li a {
+  font-size: 26px;
+  color: rgba(255,255,255,1);
+  text-decoration: none;  
+}
+
+nav li a:hover {
+  color: rgba(255,243,163,1);
+}
+
+.aktiv {
+  color: lightskyblue;
+}
+
+#visual {
+  background: url(bilder/kopfbild0.jpg);
+  height: 234px;
+}
+
+main {
+  font-size: 0;
+  margin-top: 30px;
+}
+
+.spalte  {
+  font-size: 16px;
+  background: rgba(255,255,255,1);
+  width: 260px;
+  display: inline-block;
+  margin-right:30px;
+  padding: 20px;
+  border-radius: 20px;
+  vertical-align: top;
+}
+
+.letzte {
+  margin-right:0;
+}
+
+.breite {
+  width: 590px;
+}
+
+.spalte h2 {
+  font-family: 'Oleo Script', cursive;
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.spalte p {
+  margin: 5px 0 10px;
+}
+
+.spalte a {
+  background-color: lightskyblue;
+  color: rgba(90,63,24,1);
+  text-decoration: none;
+  display: inline-block;
+  margin-top:10px;
+  padding: 3px 40px 4px 10px;
+  border-radius: 5px;
+  width: auto;
+  border-style: none;
+}
+.spalte a:hover {
+  background-color: gold;
+  color: rgba(255,255,255,1);
+}
+
+.bildspalte {
+  display: inline-block;
+}
+.bildspalte img {
+  border-radius: 20px;
+}
+
+footer {
+  background-color: lightskyblue;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  height: 33px;
+  font-size: 0;
+  padding: 5px 20px;
+}
+
+#linkmail {
+  background-image: url(bilder/mail.png);
+  background-repeat: no-repeat;
+  height: 26px;
+  font-size: 16px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 5px 50px;
+}
+
+#linkmail:hover {
+  color: rgba(90,63,24,1);
+}
+
+#linktwitter, #linkfacebook, #linkgoogle {
+  height: 30px;
+  width: 30px;
+  vertical-align: top;
+  margin-left: 10px;
+  display: inline-block;
+  background-image: url(bilder/social_icons.png);
+}
+#linktwitter {
+margin-left: 646px;
+}
+#linkfacebook {
+  background-position: -41px 0;
+}
+#linkgoogle {
+  background-position: -82px 0;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+
+/* Galerie - Formular */
+
+form {
+  display: inline;
+}
+
+.galerie{
+  margin: 0;
+  padding: 0;
+  width: 630px;
+  height: auto;
+  position: relative;
+}
+
+.galerie input {
+  display: none;
+}
+#guckloch {
+  width: 620px;
+  height: 384px;
+  border-radius:20px;
+  overflow: hidden;
+  position:relative;
+  border:5px solid white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#bildListe {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: calc(6 * 630px);
+  transition: left 500ms ease-in-out;
+  position: absolute;
+  left: 0px;
+}
+
+
+#bildListe li {
+  float: left;
+}
+#b2:checked ~ #guckloch #bildListe{
+  left: -630px;
+}
+#b3:checked ~ #guckloch #bildListe{
+  left: calc(2 * -630px);
+}
+#b4:checked ~ #guckloch #bildListe{
+  left: calc(3 * -630px);
+}
+#b5:checked ~ #guckloch #bildListe{
+  left: calc(4 * -630px);
+}
+#b6:checked ~ #guckloch #bildListe{
+  left: calc(5 * -630px);
+}
+#sliderControls {
+  text-align: center;
+  padding: 0;
+  list-style-type: none;				
+}
+#sliderControls li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#sliderControls label {
+  display: block;
+  width: 11px;
+  height: 11px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#sliderControls label:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#b1:checked ~ #sliderControls [for=b1] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#b2:checked ~ #sliderControls [for=b2] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#b3:checked ~ #sliderControls [for=b3] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#b4:checked ~ #sliderControls [for=b4] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#b5:checked ~ #sliderControls [for=b5] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+#b6:checked ~ #sliderControls [for=b6] {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+/* Kontakt - Formular */
+
+#Kontaktformular label {
+  display: inline-block;
+  width: 160px;  
+}
+#Kontaktformular  input,
+#Kontaktformular  textarea {
+  vertical-align:top;
+  padding: 5px;
+  width: 300px; 
+  background-color: lightskyblue;
+  border: solid rgba(90,63,24,1.00);
+  border-width: 0 0 1px;
+  color: rgba(90,63,24,1.00);
+}
+#Kontaktformular input:focus,
+#Kontaktformular textarea:focus {
+  background-color: powderblue;
+  color: rgba(0,0,0,1.00)
